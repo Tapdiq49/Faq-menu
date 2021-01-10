@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap');
+
+body{
+    font-family: 'Kumbh Sans', sans-serif;
+    background-image: linear-gradient(360deg, rgb(175 103 233), rgb(101 101 231));
+
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.container-md{
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 100vh;
+}
+h1{
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+    padding-left: 16px;
+}
+.box-img{
+    position: absolute;
+    top: 0;
+    bottom: -115px;
+    left: -90px;
+    margin: auto 0;
+    z-index: 3;
+}
+
+.wrapper{
+    width: 100%;
+    position: relative;
+    background-color: #fff;
+    height: 500px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+
+.computer-img{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -90px;
+    margin: auto;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.bg-img{
+    width: 90%;
+    position: absolute;
+    top: -55%;
+    left: -50%;
+}
+
+.accordion{
+    background-color: #fff;
+    width: 50%;
+    margin-right: 45px;
+}
+
+.accordion-button:focus{
+    border-color: rgba(0,0,0,.125);;
+    box-shadow: none;
+}
+
+.accordion-button:not(.collapsed) {
+    color: rgb(15, 14, 14);
+     background-color: transparent; 
+}
+
+.accordion-button::after{
+    color: rgb(212, 31, 31);
+}
+
+@media (max-width: 992px){
+    .box{
+        display: none;
+    }
+    .computer-img{
+        opacity: 0.4;
+    }
+    .bg-img{
+        opacity: 0;
+    }
+    .accordion{
+        margin-left: 20px;
+        width: 100%;
+        z-index: 99;
+        background-color: transparent;
+    }
+}
